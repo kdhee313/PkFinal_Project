@@ -2,11 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Login">
 
-	<select id="Login"
+	<select id="LoginAction"
 		resultType="com.pkfinal.main.members.vo.MembersVo">
 			SELECT * FROM MEMEBERS
-			 WHERE M_ID = #{m_id}
-	
+			 WHERE M_UID = #{m_uid}
+			 AND M_PWD = #{m_pwd}
+			 AND M_GBN = #{m_gbn}
+			 AND M_USE_DEL = 'Y'
 	</select>
 
 </mapper>
