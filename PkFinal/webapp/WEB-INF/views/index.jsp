@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -204,8 +205,15 @@
                 <nav id="subNav">
                     <div class="inwrap">
                         <ul id="myMenu">
-                            <li><a href="#">로그인</a></li>
-                            <li><a href="/Members/JoinForm">회원가입</a></li>
+                        	<c:choose>
+                        		<c:when test="${loginMember == null}">
+		                            <li><a href="/Members/Login">로그인</a></li>
+		                            <li><a href="/Members/JoinForm">회원가입</a></li>
+		                        </c:when>
+		                        <c:otherwise>
+		                            <li><a href="/Members/Logout">로그아웃</a></li>
+		                        </c:otherwise>
+                        	</c:choose>
                             <li><a href="/Map">지도</a></li>
                         </ul>
                     </div>
@@ -247,7 +255,7 @@
                 <div class="inwrap">
                 footer영역입니다.
                 <p id="managerArea">
-                    <a href="#" id="man_log">관리자 로그인</a>
+                    <a href="/Admin/Login" id="man_log">관리자 로그인</a>
                 </p>
                  </div>
             </footer>
