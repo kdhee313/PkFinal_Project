@@ -17,7 +17,7 @@ public class LoginDaoImpl implements LoginDao {
 
 	@Override
 	public MembersVo loginAction(HashMap<String, Object> map) {
-		MembersVo membersVo = sqlSession.selectOne("Members.IdDupCheck", map);
+		MembersVo membersVo = sqlSession.selectOne("Login.LoginAction", map);
 		return membersVo;
 	}
 

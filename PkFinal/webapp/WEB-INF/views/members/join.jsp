@@ -25,8 +25,8 @@
 					$("#addr").val(data.bname);
 				}
 			}).open({
-				left: (window.screen.width / 2 ) - (width / 2),
-				top : (window.screen.height / 2) - (height / 2)
+				left: (window.screen.width/2) - (width/2),
+				top : (window.screen.height/2) - (height/2)
 			});
 		});
 	}
@@ -35,16 +35,15 @@
 <!-- 로그인 중복체크 js  -->
 <script>
 $(function() {
-	  $('#idDupCheckBtn').change(function( e ) {
+	  $('#idDupCheckBtn').keyup(function( e ) {
 		  e.preventDefault();
 		  e.stopPropagation();
 		  $.ajax({
 			  url      : '/IdDupCheck', 
 			  type     : 'GET',
 			  data     : {m_uid : $('[name=m_uid]').val() },
-			  dataType : 'json', 
+			  dataType : 'json',
 			  success  : function(data) {
-				 
 				  if(data.membersVo == null) {
 					  $('#dupResult').html(
 						 '<br><b style="color:green;">사용가능한 아이디입니다</b>');

@@ -80,6 +80,9 @@
 			<mvc:exclude-mapping path="/Members/*" />
 			<!-- 관리자 관련 -->
 			<mvc:exclude-mapping path="/Admin/*" />
+			<!-- 아이디 중복 찾 -->
+			<mvc:exclude-mapping path="/IdDupCheck" />
+			<mvc:exclude-mapping path="/NearCenter" />
 			<!-- 인터셉터 처리 핸들러 -->
 			<bean id="authInterceptor"
 				class="com.pkfinal.login.controller.LoginInterceptor"></bean>

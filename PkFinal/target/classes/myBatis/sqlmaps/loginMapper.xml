@@ -3,12 +3,14 @@
 <mapper namespace="Login">
 
 	<select id="LoginAction"
-		resultType="com.pkfinal.main.members.vo.MembersVo">
-			SELECT * FROM MEMEBERS
-			 WHERE M_UID = #{m_uid}
-			 AND M_PWD = #{m_pwd}
-			 AND M_GBN = #{m_gbn}
-			 AND M_USE_DEL = 'Y'
+	 parameterType="hashmap"
+	 resultType="com.pkfinal.main.members.vo.MembersVo">
+			SELECT *
+			FROM MEMBERS
+			WHERE M_UID = #{m_uid}
+			AND M_PWD = #{m_pwd}
+			AND M_GBN = #{m_gbn}
+			AND M_USE_DEL = 'Y'
 	</select>
 
 </mapper>

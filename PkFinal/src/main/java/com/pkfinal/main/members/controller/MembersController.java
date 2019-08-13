@@ -48,8 +48,7 @@ public class MembersController {
 	
 	// 아이디 중복체크
 	@ResponseBody
-	@RequestMapping(value="/IdDupCheck", method=RequestMethod.GET,
-			headers="Accept=application/json")
+	@RequestMapping(value="/IdDupCheck", method=RequestMethod.GET, headers="Accept=application/json")
 	public HashMap<String, Object> idDupCheck(@RequestParam HashMap<String, Object> map) {
 		
 		map = membersService.idDupCheck(map);
@@ -59,8 +58,7 @@ public class MembersController {
 
 	// 근처 센터 찾기
 	@ResponseBody
-	@RequestMapping(value="/NearCenter", method=RequestMethod.GET,
-	headers="Accept=application/json")
+	@RequestMapping(value="/NearCenter", method=RequestMethod.GET, headers="Accept=application/json")
 	public HashMap<String, Object> nearCenter(@RequestParam HashMap<String, Object> map) {
 
 		map = centersService.nearCenter(map);

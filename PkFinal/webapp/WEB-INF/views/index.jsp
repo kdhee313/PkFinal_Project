@@ -211,6 +211,7 @@
 		                            <li><a href="/Members/JoinForm">회원가입</a></li>
 		                        </c:when>
 		                        <c:otherwise>
+		                            <li><a href="#">${loginMember.m_name}님</a></li>
 		                            <li><a href="/Members/Logout">로그아웃</a></li>
 		                        </c:otherwise>
                         	</c:choose>
