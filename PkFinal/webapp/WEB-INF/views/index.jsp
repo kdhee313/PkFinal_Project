@@ -216,6 +216,7 @@
 		                        </c:otherwise>
                         	</c:choose>
                             <li><a href="/Map">지도</a></li>
+                            <li><a href="/test">테스트</a></li>
                         </ul>
                     </div>
                 </nav>
